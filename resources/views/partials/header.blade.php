@@ -9,8 +9,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link text-white" aria-current="page"
-                                    href="{{ route('home') }}">Homepage</a>
+                                <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('new-page') }}">Aggiungi fumetto</a>

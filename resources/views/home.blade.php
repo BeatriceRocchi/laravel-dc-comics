@@ -5,5 +5,5 @@
 @endsection
 
 @section('title')
-    Homepage
+    Home
 @endsection
