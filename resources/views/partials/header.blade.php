@@ -16,7 +16,7 @@
                                     href="{{ route('comics.index') }}">Archivio fumetti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="{{ route('new-page') }}">Aggiungi fumetto</a>
+                                <a class="nav-link text-white" href="{{ route('comics.create') }}">Aggiungi fumetto</a>
                             </li>
                         </ul>
                     </div>
