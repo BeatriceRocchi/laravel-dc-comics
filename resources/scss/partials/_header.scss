@@ -1,6 +1,10 @@
 header {
     background-color: $color-primary;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, $alpha: 0.2);
 
     #logo-comics {
         height: 60px;

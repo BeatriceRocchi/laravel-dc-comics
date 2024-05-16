@@ -1,20 +1,29 @@
-.card-custom {
-    img {
-        height: 470px;
+main {
+    padding-top: 80px;
+
+    #hero {
         width: 100%;
+        height: calc(100vh - 80px - 50px);
         object-fit: cover;
     }
+    .card-custom {
+        img {
+            height: 470px;
+            width: 100%;
+            object-fit: cover;
+        }
 
-    h5,
-    p {
-        height: 48px;
-    }
+        h5,
+        p {
+            height: 48px;
+        }
 
-    .cta-box {
-        a {
-            display: inline-block;
-            height: 40px;
-            width: 40px;
+        .cta-box {
+            a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+            }
         }
     }
 }
