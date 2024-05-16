@@ -1,0 +1,10 @@
+.comic-details {
+    background-color: lighten($color-primary, 40%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    img {
+        height: 700px;
+        width: 450px;
+        object-fit: cover;
+    }
+}

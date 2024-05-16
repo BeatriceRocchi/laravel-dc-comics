@@ -10,7 +10,12 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $comic->title }}</h5>
                             <p class="card-text">{{ $comic->series }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div class="cta-box d-flex justify-content-around">
+                                <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary"><i
+                                        class="fa-solid fa-info"></i></a>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a>
+                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
