@@ -13,7 +13,8 @@
                             <div class="cta-box d-flex justify-content-around">
                                 <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary"><i
                                         class="fa-solid fa-info"></i></a>
-                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-pen"></i></a>
+                                <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary"><i
+                                        class="fa-solid fa-pen"></i></a>
                                 <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
                             </div>
                         </div>

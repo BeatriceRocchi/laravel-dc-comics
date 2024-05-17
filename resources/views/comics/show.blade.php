@@ -8,7 +8,7 @@
             <div class="mx-5">
                 <h1>{{ $comic->title }}</h1>
                 <h3>{{ $comic->series }} &bull; {{ $comic->sale_date }} &bull; {{ $comic->type }} </h3>
-                <h2 class="text-end">{{ $comic->price }}</h2>
+                <h2 class="text-end">$ {{ $comic->price }}</h2>
                 <p class="py-4">{!! $comic->description !!}</p>
                 <h6>Grafici:</h6>
                 <p>{{ $comic->artists }}</p>
