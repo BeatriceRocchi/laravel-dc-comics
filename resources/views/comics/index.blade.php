@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container">
+
+        @if (session('delete_msg'))
+            <div class="mt-5 p-3 bg-info-subtle rounded-2">{{ session('delete_msg') }}</div>
+        @endif
+
         <div class="row row-cols-4 my-5">
             @forelse ($comics as $comic)
                 <div class="col my-3">
@@ -15,7 +20,11 @@
                                         class="fa-solid fa-info"></i></a>
                                 <a href="{{ route('comics.edit', $comic) }}" class="btn btn-primary"><i
                                         class="fa-solid fa-pen"></i></a>
-                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-trash"></i></a>
+                                <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
