@@ -9,4 +9,12 @@ header {
     #logo-comics {
         height: 60px;
     }
+
+    .nav-item-custom {
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid white;
+        }
+    }
 }

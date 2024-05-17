@@ -8,14 +8,14 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-custom">
                                 <a class="nav-link text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-custom">
                                 <a class="nav-link text-white" aria-current="page"
                                     href="{{ route('comics.index') }}">Archivio fumetti</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-custom">
                                 <a class="nav-link text-white" href="{{ route('comics.create') }}">Aggiungi fumetto</a>
                             </li>
                         </ul>
