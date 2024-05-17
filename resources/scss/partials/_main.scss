@@ -17,13 +17,50 @@ main {
         p {
             height: 48px;
         }
+    }
 
-        .cta-box {
-            a,
-            button {
-                display: inline-block;
-                height: 40px;
-                width: 40px;
+    .cta-box {
+        a,
+        button {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            margin-right: 8px;
+        }
+
+        .btn-info-custom {
+            background-color: $color-secondary;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color-secondary, 5%);
+                transform: translateY(-10px);
+                transition: all 0.5s;
+            }
+        }
+
+        .btn-edit-custom {
+            background-color: $color-tertiary;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color-tertiary, 5%);
+                transform: translateY(-10px);
+                transition: all 0.5s;
+            }
+        }
+
+        .btn-delete-custom {
+            background-color: $color-quaternary;
+            color: white;
+
+            &:hover {
+                cursor: pointer;
+                background-color: darken($color-quaternary, 5%);
+                transform: translateY(-10px);
+                transition: all 0.5s;
             }
         }
     }

@@ -14,7 +14,16 @@
                 <p>{{ $comic->artists }}</p>
                 <h6>Scrittori:</h6>
                 <p>{{ $comic->writers }}</p>
-                <a href="{{ route('comics.index') }}" class="btn btn-primary">Torna all'archivio</a>
+                <div class="cta-box d-flex justify-content-around">
+                    <a href="{{ route('comics.index') }}" class="btn btn-primary w-auto mx-2">Torna all'archivio</a>
+                    <a href="{{ route('comics.edit', $comic) }}" class="btn btn-edit-custom"><i
+                            class="fa-solid fa-pen"></i></a>
+
+                    @include('partials.delete_form')
+
+                </div>
+
+
             </div>
         </div>
     </div>
