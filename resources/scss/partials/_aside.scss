@@ -1,0 +1,25 @@
+aside {
+    width: 200px;
+    height: calc(100vh - 80px);
+    background-color: $color-primary;
+    padding: 10px;
+    flex-shrink: 0;
+
+    .nav-item-custom {
+        display: flex;
+        align-items: center;
+
+        i {
+            color: white;
+        }
+
+        a {
+            border-bottom: 2px solid transparent;
+            margin-left: 10px;
+
+            &:hover {
+                border-bottom: 2px solid white;
+            }
+        }
+    }
+}

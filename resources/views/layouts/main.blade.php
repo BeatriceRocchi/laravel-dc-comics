@@ -20,11 +20,16 @@
 <body>
     @include('partials.header')
 
-    <main>
-        @yield('content')
-    </main>
+    <main class="vh-100">
+        <div class="d-flex h-100">
 
-    @include('partials.footer')
+            @include('partials.aside')
+
+            <div class="flex-grow-1 overflow-y-scroll">
+                @yield('content')
+            </div>
+        </div>
+    </main>
 
 </body>
 
