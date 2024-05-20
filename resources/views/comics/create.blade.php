@@ -119,6 +119,11 @@
                     <label for="description" class="form-label">Descrizione</label>
                     <textarea name="description" id="description" rows="5"
                         class="form-control @error('description') is-invalid  @enderror">{{ old('description') }}</textarea>
+                    @error('description')
+                        <div id="description" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
             </div>
 
