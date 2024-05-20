@@ -16,7 +16,7 @@
                     <a class="nav-link text-white" href="{{ route('comics.create') }}">Aggiungi fumetto</a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user-shield"></i>
                     <a class="nav-link text-white" href="#">Admin</a>
                 </li>
             </ul>

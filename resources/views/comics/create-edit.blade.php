@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container my-5">
+    <div class="container my-5 px-5">
         <h5 class="my-4 text-center">{{ $text }}</h5>
 
         @if ($errors->any())
