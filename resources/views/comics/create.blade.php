@@ -1,4 +1,4 @@
-@php
+{{-- @php
     $status = 'test';
     if ($status = 'test') {
         $title = 'Batgirl #2';
@@ -13,7 +13,7 @@
         $artists = 'Rafael Albuquerque';
         $writers = 'Hope Larson';
     }
-@endphp
+@endphp --}}
 
 @extends('layouts.main')
 
@@ -22,45 +22,66 @@
         <h5 class="my-4 text-center">Compila tutti i campi del form con i dati richiesti per aggiungere il fumetto
             nell'archivio di DC
             Comics</h5>
+
+        @if ($errors->any())
+            <div class="alert alert-danger" role="alert">
+                Nella compilazione del form sono stati commessi i seguenti errori:
+                <ul class="m-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="row g-3 my-4">
                 <div class="col-6">
                     <label for="title" class="form-label">Titolo</label>
-                    <input name="title" type="text" class="form-control" id="title" value="{{ $title }}">
+                    <input name="title" type="text" class="form-control @error('title') is-invalid @enderror"
+                        id="title" value="{{ old('title') }}">
+                    @error('title')
+                        <div id="title" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
+
                 <div class="col-6">
                     <label for="series" class="form-label">Serie</label>
-                    <input name="series" type="text" class="form-control" id="series" value="{{ $series }}">
+                    <input name="series" type="text" class="form-control" id="series" value="{{ old('series') }}">
                 </div>
                 <div class="col-4">
                     <label for="type" class="form-label">Tipo</label>
-                    <input name="type" type="text" class="form-control" id="type" value="{{ $type }}">
+                    <input name="type" type="text" class="form-control" id="type" value="{{ old('type') }}">
                 </div>
                 <div class="col-4">
                     <label for="sale_date" class="form-label">Data di vendita</label>
-                    <input name="sale_date" type="date" class="form-control" id="sale_date" value="{{ $sale_date }}">
+                    <input name="sale_date" type="date" class="form-control" id="sale_date"
+                        value="{{ old('sale_date') }}">
                 </div>
                 <div class="col-4">
                     <label for="price" class="form-label">Prezzo</label>
                     <input name="price" type="number" min="0" step=".01" class="form-control" id="price"
-                        value="{{ $price }}">
+                        value="{{ old('price') }}">
                 </div>
                 <div class="col-12">
                     <label for="thumb" class="form-label">Immagine</label>
-                    <input name="thumb" type="text"class="form-control" id="thumb" value="{{ $thumb }}">
+                    <input name="thumb" type="text"class="form-control" id="thumb" value="{{ old('thumb') }}">
                 </div>
                 <div class="col-6">
                     <label for="artists" class="form-label">Grafici</label>
-                    <textarea name="artists" id="artists" rows="2" class="form-control">{{ $artists }}</textarea>
+                    <textarea name="artists" id="artists" rows="2" class="form-control">{{ old('artists') }}</textarea>
                 </div>
                 <div class="col-6">
                     <label for="writers" class="form-label">Scrittori</label>
-                    <textarea name="writers" id="writers" rows="2" class="form-control">{{ $writers }}</textarea>
+                    <textarea name="writers" id="writers" rows="2" class="form-control">{{ old('writers') }}</textarea>
                 </div>
                 <div class="col-12">
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea name="description" id="description" rows="5" class="form-control">{{ $description }}</textarea>
+                    <textarea name="description" id="description" rows="5" class="form-control">{{ old('description') }}</textarea>
                 </div>
             </div>
 
