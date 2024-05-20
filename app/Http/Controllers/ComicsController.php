@@ -23,7 +23,12 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        return view('comics.create');
+        $text = 'Compila tutti i campi del form con i dati richiesti per aggiungere il fumetto nell\'archivio di DC Comics';
+        $btn_text = 'Aggiungi fumetto';
+        $route = route('comics.store');
+        $method = 'POST';
+        $comic = null;
+        return view('comics.create-edit', compact('text', 'btn_text', 'route', 'method', 'comic'));
     }
 
     /**
@@ -57,7 +62,11 @@ class ComicsController extends Controller
      */
     public function edit(Comic $comic)
     {
-        return view('comics.edit', compact('comic'));
+        $text = 'Edita i campi del form per modificare i dati del fumetto nell\'archivio di DC Comics';
+        $btn_text = 'Modifica fumetto';
+        $route = route('comics.update', $comic);
+        $method = 'PUT';
+        return view('comics.create-edit', compact('comic', 'text', 'btn_text', 'route', 'method'));
     }
 
     /**
