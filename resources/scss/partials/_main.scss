@@ -35,8 +35,6 @@ main {
             &:hover {
                 cursor: pointer;
                 background-color: darken($color-secondary, 5%);
-                transform: translateY(-10px);
-                transition: all 0.5s;
             }
         }
 
@@ -47,8 +45,6 @@ main {
             &:hover {
                 cursor: pointer;
                 background-color: darken($color-tertiary, 5%);
-                transform: translateY(-10px);
-                transition: all 0.5s;
             }
         }
 
@@ -59,8 +55,6 @@ main {
             &:hover {
                 cursor: pointer;
                 background-color: darken($color-quaternary, 5%);
-                transform: translateY(-10px);
-                transition: all 0.5s;
             }
         }
     }
