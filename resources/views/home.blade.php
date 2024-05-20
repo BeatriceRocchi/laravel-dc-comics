@@ -47,9 +47,30 @@
                         <h5 class="m-0">ToDo</h5>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Inserire fumetto Batgirl #2</li>
-                        <li class="list-group-item">Modificare descrizione fumetto Aquaman Vol. 4: Underworld</li>
-                        <li class="list-group-item">Eliminare fumetto Batman Beyond #1</li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="addComic">
+                                <label class="form-check-label" for="addComic">
+                                    Inserire fumetto Batgirl #2
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="editComic">
+                                <label class="form-check-label" for="editComic">
+                                    Modificare descrizione fumetto Aquaman Vol. 4: Underworld
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="deleteComic">
+                                <label class="form-check-label" for="deleteComic">
+                                    Eliminare fumetto Batman Beyond #1
+                                </label>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
