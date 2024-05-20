@@ -51,37 +51,74 @@
 
                 <div class="col-6">
                     <label for="series" class="form-label">Serie</label>
-                    <input name="series" type="text" class="form-control" id="series" value="{{ old('series') }}">
+                    <input name="series" type="text" class="form-control @error('series') is-invalid @enderror"
+                        id="series" value="{{ old('series') }}">
+                    @error('series')
+                        <div id="series" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="col-4">
                     <label for="type" class="form-label">Tipo</label>
-                    <input name="type" type="text" class="form-control" id="type" value="{{ old('type') }}">
+                    <input name="type" type="text" class="form-control @error('type') is-invalid @enderror"
+                        id="type" value="{{ old('type') }}">
+                    @error('type')
+                        <div id="type" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="col-4">
                     <label for="sale_date" class="form-label">Data di vendita</label>
-                    <input name="sale_date" type="date" class="form-control" id="sale_date"
-                        value="{{ old('sale_date') }}">
+                    <input name="sale_date" type="date" class="form-control @error('sale_date') is-invalid @enderror"
+                        id="sale_date" value="{{ old('sale_date') }}">
+                    @error('sale_date')
+                        <div id="sale_date" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="col-4">
                     <label for="price" class="form-label">Prezzo</label>
-                    <input name="price" type="number" min="0" step=".01" class="form-control" id="price"
+                    <input name="price" type="number" min="0" step=".01"
+                        class="form-control @error('price') is-invalid @enderror" id="price"
                         value="{{ old('price') }}">
+                    @error('price')
+                        <div id="price" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="col-12">
                     <label for="thumb" class="form-label">Immagine</label>
-                    <input name="thumb" type="text"class="form-control" id="thumb" value="{{ old('thumb') }}">
+                    <input name="thumb" type="text" class="form-control @error('thumb') is-invalid @enderror"
+                        id="thumb" value="{{ old('thumb') }}">
+                    @error('thumb')
+                        <div id="thumb" class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
+
                 <div class="col-6">
                     <label for="artists" class="form-label">Grafici</label>
                     <textarea name="artists" id="artists" rows="2" class="form-control">{{ old('artists') }}</textarea>
                 </div>
+
                 <div class="col-6">
                     <label for="writers" class="form-label">Scrittori</label>
                     <textarea name="writers" id="writers" rows="2" class="form-control">{{ old('writers') }}</textarea>
                 </div>
+
                 <div class="col-12">
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea name="description" id="description" rows="5" class="form-control">{{ old('description') }}</textarea>
+                    <textarea name="description" id="description" rows="5"
+                        class="form-control @error('description') is-invalid  @enderror">{{ old('description') }}</textarea>
                 </div>
             </div>
 
