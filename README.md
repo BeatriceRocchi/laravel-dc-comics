@@ -22,7 +22,7 @@ php artisan serve
 
 The backoffice dashboard is made up of an aside menu on the left that allows to navigate across all the sections.
 
-1. Home
+1. **Home**
 
     The home offers a summary of the comics in the archive. For each comic there are the following data: title, series, type. Moreover, there is a quick access to:
 
@@ -32,12 +32,14 @@ The backoffice dashboard is made up of an aside menu on the left that allows to 
 
     On the right of the home there are a todo list and a FAQ section to simplify the use of the dashboard.
 
-2. Archive
+2. **Archive**
 
     The archive shows all the available comics. Like the summary in the home, for each comic there is a quick access to get more information, edit and, delete the comic. Furthermore for each comic there is the cover image.
 
-3. Add comic
-   This form allows to add a new comic in the archive. For each comic, the following information are required:
+3. **Add comic**
+
+    This form allows to add a new comic in the archive. For each comic, the following information are required:
+
     - title
     - series
     - type
@@ -47,4 +49,5 @@ The backoffice dashboard is made up of an aside menu on the left that allows to 
     - graphics
     - writers
     - description
-      By clicking on "Add comic" button, the comic is added in the database.
+
+    By clicking on "Add comic" button, the comic is added in the database.
